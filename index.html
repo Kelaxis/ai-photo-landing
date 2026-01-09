@@ -28,7 +28,6 @@
     html {
       -webkit-text-size-adjust: 100%;
       text-size-adjust: 100%;
-      overflow-x: hidden;
     }
 
     body {
@@ -38,7 +37,6 @@
       color: var(--ink);
       background: #f4efe6 url("background.jpeg") center / cover no-repeat fixed;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     body::before {
@@ -138,6 +136,7 @@
       padding: 28px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(6px);
+      width: 100%;
     }
 
     .eyebrow {
@@ -450,6 +449,16 @@
       border-radius: 16px;
     }
 
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-wrap table {
+      width: 100%;
+      table-layout: fixed;
+    }
+
     .tariffs th, .tariffs td {
       padding: 12px 14px;
       text-align: center;
@@ -702,36 +711,38 @@
 
     <section id="tariffs" class="panel tariffs reveal" style="--delay: 0.18s;">
       <h2>Тарифы</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Формат</th>
-            <th>1 портрет</th>
-            <th>3 портрета</th>
-            <th>5 портретов</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Соло стилизация (1 человек)</td>
-            <td>150 руб.</td>
-            <td>400 руб.</td>
-            <td>650 руб.</td>
-          </tr>
-          <tr>
-            <td>Дуэт / семейный (2 человека)</td>
-            <td>300 руб.</td>
-            <td>600 руб.</td>
-            <td>900 руб.</td>
-          </tr>
-          <tr>
-            <td>Сюжетная композиция (3+ человек)</td>
-            <td>500 руб.</td>
-            <td>700 руб.</td>
-            <td>1 000 руб.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Формат</th>
+              <th>1 портрет</th>
+              <th>3 портрета</th>
+              <th>5 портретов</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Соло стилизация (1 человек)</td>
+              <td>150 руб.</td>
+              <td>400 руб.</td>
+              <td>650 руб.</td>
+            </tr>
+            <tr>
+              <td>Дуэт / семейный (2 человека)</td>
+              <td>300 руб.</td>
+              <td>600 руб.</td>
+              <td>900 руб.</td>
+            </tr>
+            <tr>
+              <td>Сюжетная композиция (3+ человек)</td>
+              <td>500 руб.</td>
+              <td>700 руб.</td>
+              <td>1 000 руб.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="highlight">
         Если из 5 фото понравилось только 2 — можно выкупить их отдельно по договорной цене
       </div>

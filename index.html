@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI-портреты по вашим фото</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,6 +37,7 @@
       color: var(--ink);
       background: #f4efe6 url("background.jpeg") center / cover no-repeat fixed;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -328,11 +329,11 @@
     }
 
     .thumbs-nav.prev {
-      left: -8px;
+      left: 8px;
     }
 
     .thumbs-nav.next {
-      right: -8px;
+      right: 8px;
     }
 
     .thumbs-wrap:not(.is-scrollable) .thumbs-nav {
